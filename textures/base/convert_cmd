@@ -1,0 +1,1 @@
+convert   input   -format ppm -compress none   output.ppm
