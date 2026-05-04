@@ -27,7 +27,10 @@ make bonus
 ## Comment exécuter avec un fichier de scène exemple
 Pour exécuter le rendu d'une scène, utilisez la commande suivante : 
 ```bash
-./miniRT scene.rt
+./miniRT [..]
+```
+```bash
+./miniRT_Bonus [..]
 ```
 
 ## Structure du projet
