@@ -42,9 +42,15 @@ Pour exécuter le rendu d'une scène, utilisez la commande suivante :
 ## Comment écrire un exemple de scène .rt simple
 Voici un exemple d'une scène minimale : 
 ```rt
-a 0.2
-l 1 1 1 0 1 0 0.5
-sp 0 0 0 1 255 0 0
+A	1	255,255,255
+
+C	0,0,0	0,0,1	60
+
+sp	-10,0,60		32		255,255,0
+sp	10,0,60		32		0,255,255
+
+
+L	0,99,60	1	255,255,255
 ```
 
 ## Conseils de dépannage
