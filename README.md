@@ -1,62 +1,72 @@
-# miniRT (Ray tracing)
+# miniRT (Ray tracing) — 42 School
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+Projet **miniRT** de l’école 42 : implémentation d’un **mini moteur de ray tracing** capable de parser des scènes `.rt` et de rendre une image via **MiniLibX**.
 
-## Présentation du projet
-miniRT est un projet de l'école 42 qui consiste à implémenter un moteur de ray tracing simple. Il permet de créer des images photoréalistes en simulant le comportement de la lumière.
+## Sommaire
+- [Pré-requis](#pré-requis)
+- [Compilation](#compilation)
+- [Exécution](#exécution)
+- [Format de scène (.rt)](#format-de-scène-rt)
+- [Organisation du dépôt](#organisation-du-dépôt)
+- [Bonus](#bonus)
 
-## Caractéristiques
-- Rendu de scènes 3D basées sur des modèles simples
-- Support pour différentes formes géométriques
-- Gestion des lumières et des ombres
-- Support pour les matériaux et textures
+## Pré-requis
+- **GNU make**
+- **clang** ou **gcc**
+- Sous Linux : dépendances X11 usuelles pour MiniLibX (selon votre distro)
 
-## Dépendances
-- [Minilibx](https://github.com/42Paris/minilibx)
-- [Libft](https://github.com/42Paris/libft)
+Le dépôt inclut `minilibx-linux/`.
 
-## Instructions de compilation
-Pour compiler le projet, utilisez les commandes suivantes : 
+## Compilation
+
 ```bash
 make
 ```
+
+Cibles courantes (si disponibles dans votre Makefile) :
+
 ```bash
-make bonus
+make clean
+make fclean
+make re
 ```
 
-## Comment exécuter avec un fichier de scène exemple
-Pour exécuter le rendu d'une scène, utilisez la commande suivante : 
+## Exécution
+
 ```bash
-./miniRT [..]
-```
-```bash
-./miniRT_Bonus [..]
+./miniRT maps/mand/<scene>.rt
 ```
 
-## Structure du projet
-- `src/` : Contient le code source
-- `include/` : Contient les fichiers d'en-tête
-- `scenes/` : Contient les fichiers de scène .rt
-- `Makefile` : Fichier pour la compilation
+(Adaptez le chemin de scène selon vos fichiers dans `maps/`.)
 
-## Comment écrire un exemple de scène .rt simple
-Voici un exemple d'une scène minimale : 
+## Format de scène (.rt)
+Exemple minimal (indicatif) :
+
 ```rt
-A	1	255,255,255
-
-C	0,0,0	0,0,1	60
-
-sp	-10,0,60		32		255,255,0
-sp	10,0,60		32		0,255,255
-
-
-L	0,99,60	1	255,255,255
+A 0.2 255,255,255
+C 0,0,-10 0,0,1 70
+L 10,10,-10 0.8 255,255,255
+sp 0,0,0 2 255,0,0
 ```
 
-## Conseils de dépannage
-- Assurez-vous que toutes les dépendances sont correctement installées.
-- Vérifiez le format du fichier .rt pour toute erreur de syntaxe.
-- Consultez le Makefile pour toute configuration erronée.
+## Organisation du dépôt
 
-## Auteurs
-- gchinaul
+- `Makefile` (racine)
+- `ft_printf/` : implémentation personnalisée de `printf` et utilitaires associés
+- `gnl/` : `get_next_line` (lecture ligne par ligne)
+- `include/` : headers du projet principal (structures, utilitaires, erreurs, parsing, ...)
+- `libft/` : bibliothèque utilitaire (libft)
+- `maps/` : scènes de test / exemple (`bonus`, `error`, `mand`)
+- `minilibx-linux/` : MiniLibX (Linux)
+- `Ray-tracing/` : dossiers/fichiers liés à des tests ou modules ray tracing (selon votre organisation)
+- `src/` : code source principal (version mandatory)
+- `src_bonus/` : code source de la version bonus
+- `textures/` : textures utilisées dans le rendu
+
+## Bonus
+Si votre projet supporte des fonctionnalités bonus (textures, bump, multi-lights, reflections, etc.), vous pouvez les lister ici.
+
+---
+
+### Auteur
+- **gchinaul**
