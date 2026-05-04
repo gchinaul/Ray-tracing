@@ -39,6 +39,9 @@ make re
 ```bash
 ./miniRT maps/mand/<scene>.rt
 ```
+```bash
+./miniRT_Bonus maps/bonus/<scene>.rt
+```
 
 (Adaptez le chemin de scène selon vos fichiers dans `maps/`.)
 
