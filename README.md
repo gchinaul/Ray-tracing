@@ -22,6 +22,9 @@ Le dépôt inclut `minilibx-linux/`.
 ```bash
 make
 ```
+```bash
+make bonus
+```
 
 Cibles courantes (si disponibles dans votre Makefile) :
 
