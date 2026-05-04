@@ -20,6 +20,9 @@ Pour compiler le projet, utilisez les commandes suivantes :
 ```bash
 make
 ```
+```bash
+make bonus
+```
 
 ## Comment exécuter avec un fichier de scène exemple
 Pour exécuter le rendu d'une scène, utilisez la commande suivante : 
