@@ -70,7 +70,6 @@ L	0,99,60	1	255,255,255
 - `libft/` : bibliothèque utilitaire (libft)
 - `maps/` : scènes de test / exemple (`bonus`, `error`, `mand`)
 - `minilibx-linux/` : MiniLibX (Linux)
-- `Ray-tracing/` : dossiers/fichiers liés à des tests ou modules ray tracing (selon votre organisation)
 - `src/` : code source principal (version mandatory)
 - `src_bonus/` : code source de la version bonus
 - `textures/` : textures utilisées dans le rendu
